@@ -1,6 +1,5 @@
 /**
- * @name My Custom Wallpaper (patched)
- * @description Wallpaper background for Discord (vencord-friendly)
+ * @name my custom wallpaper (vencord-friendly)
  * @author StormaxO2
  * @version 1.1
  */
@@ -8,10 +7,10 @@
 :root{
   --wallpaper-url: "https://raw.githubusercontent.com/StormaxO2/Wallpaper/refs/heads/main/EEEEEEE.png";
   --wallpaper-blur: 0px;
-  --wallpaper-opacity: 0.80; /* overlay darkness (0 = transparent, 1 = opaque) */
+  --wallpaper-opacity: 0.80; /* 0 = transparent, 1 = full black overlay */
 }
 
-/* page-level background (fixed, covers whole window) */
+/* global background (reliable across panels) */
 body::before{
   content: "";
   position: fixed;
@@ -26,16 +25,12 @@ body::before{
   pointer-events: none;
 }
 
-/* darken the app area so text/icons remain readable */
-.appMount-2yBXZl,
-.appMount-2lKD-0,
+/* darken app container so text/icons remain readable */
+.app,
 .app-19_D0k,
-.app {
-  background-color: rgba(0,0,0,var(--wallpaper-opacity)) !important;
-}
-
-/* safety: if certain panels override backgrounds */
+.appMount-2yBXZl,
 .theme-dark .app,
 .theme-light .app {
   background-color: rgba(0,0,0,var(--wallpaper-opacity)) !important;
+  background-image: none !important;
 }
