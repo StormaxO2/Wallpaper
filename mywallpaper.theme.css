@@ -7,10 +7,9 @@
 :root{
   --wallpaper-url: "https://raw.githubusercontent.com/StormaxO2/Wallpaper/refs/heads/main/EEEEEEE.png";
   --wallpaper-blur: 0px;
-  --wallpaper-opacity: 0.80; /* 0 = transparent, 1 = full black overlay */
+  --wallpaper-opacity: 0.80;
 }
 
-/* global background (reliable across panels) */
 body::before{
   content: "";
   position: fixed;
