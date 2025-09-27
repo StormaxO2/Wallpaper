@@ -1,0 +1,20 @@
+/**
+ * @name My Custom Wallpaper
+ * @description Simple wallpaper background for Discord
+ * @author StormaxO2
+ * @version 1.0
+ */
+
+:root {
+  --wallpaper: url("https://i.imgur.com/yourImageHere.jpg"); /* replace with your wallpaper link */
+  --wallpaper-blur: 0px;  
+  --wallpaper-opacity: 0.8; 
+}
+
+.appMount-2yBXZl {
+  background: var(--wallpaper) center/cover no-repeat fixed !important;
+}
+
+.theme-dark, .theme-light {
+  background: rgba(0,0,0,var(--wallpaper-opacity)) !important;
+}
